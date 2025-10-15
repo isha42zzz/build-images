@@ -1,0 +1,6 @@
+target
+.vscode
+libgeneration.so
+libverification.so
+*logs*
+*log*

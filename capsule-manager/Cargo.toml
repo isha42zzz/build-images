@@ -1,0 +1,59 @@
+[package]
+name = "capsule_manager"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "3.x", features = ["derive"]}
+merge = "0.1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+log = "0.4"
+log4rs = "1.0.0"
+tonic = { version = "0.9.2", features = ["tls"] }
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+indoc = "2"
+thiserror = "1.0.25"
+once_cell = "1.18.0"
+openssl-sys = "0.9"
+openssl =  { version = "0.10"}
+pem-rfc7468 = { version="0.7.0", features=["alloc"]}
+serde_json = "1.0.104"
+base64 = "0.21.2"
+prost = "0.11"
+prost-types = "0.11.1"
+chrono = { version = "0.4.26", feaures = ["serde"] }
+rhai = { version = "1.5.0", features = [
+  "sync",
+  "only_i32",
+  "no_function",
+  "no_float",
+  "no_optimize",
+  "no_module",
+  "serde",
+  "unchecked",
+] }
+hex = "0.4.3"
+base32 = "0.4.0"
+lazy_static = "1.4.0"
+sdc_apis = "0.2.1-dev20240222"
+trustflow-attestation-rs = { version = "0.3.1-dev20240726"}
+sea-orm = { version = "^0.12.0", features = [ "sqlx-mysql", "runtime-tokio-native-tls", "macros" ] }
+sqlx = { version = "0.7", features = [ "runtime-tokio" ] }
+eyre = "0.6.11"
+sqlx-core = "0.7.4"
+axum = "0.7.5"
+async-trait = "0.1.80"
+[dependencies.uuid]
+version = "1.8.0"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]
+
+[dev-dependencies]
+serde_test = "1.0"
+assert-json-diff = "2.0.2"

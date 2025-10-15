@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "trustflow-attestation-generator",
+    "trustflow-attestation-sys",
+    "trustflow-attestation-rs"
+]
