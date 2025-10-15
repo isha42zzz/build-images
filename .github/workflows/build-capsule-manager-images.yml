@@ -1,9 +1,5 @@
 name: Build Capsule Manager Images
 
-permissions:
-  contents: read
-  packages: write
-
 on:
   workflow_dispatch:
   push:
@@ -13,6 +9,11 @@ on:
 jobs:
   build-tdx:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
